@@ -1,4 +1,6 @@
 import 'dart:io' show Platform;
+import 'package:caretosharemobile/presentation/auth/signin.dart';
+import 'package:caretosharemobile/presentation/auth/signup.dart';
 import 'package:flutter/cupertino.dart' show CupertinoPageRoute;
 import 'package:flutter/material.dart';
 import 'package:caretosharemobile/splashView.dart';
@@ -28,6 +30,14 @@ class Routes {
         const SplashView(),
         settings.name!,
       ),
+      AppRoutes.signinView => buildPageRoute(
+        const SignInView(),
+        settings.name!,
+      ),
+      AppRoutes.signupView => buildPageRoute(
+        const SignUpView(),
+        settings.name!,
+      ),
       _ => null,
     };
   }
@@ -35,4 +45,6 @@ class Routes {
 
 abstract class AppRoutes {
   static const splashView = '/splash-view';
+  static const signinView = '/signin-view';
+  static const signupView = '/signup-view';
 }
